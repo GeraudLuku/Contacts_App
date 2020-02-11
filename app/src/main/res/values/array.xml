@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    string array for contacts settings page-->
+    <string-array name="contacts_settings">
+        <item>Addable as Contact</item>
+        <item>Block Contact</item>
+        <item>Delete Contact</item>
+        <item>Report Contacts</item>
+        <item>Export Contacts</item>
+        <item>Import Contacts</item>
+        <item>Share Contacts</item>
+    </string-array>
+
+
+    <string-array name="search_options">
+        <item>FILTER BY</item>
+        <item>Username</item>
+        <item>Number</item>
+        <item>Email</item>
+    </string-array>
+
+    <string-array name="filter_options">
+        <item>FILTER BY </item>
+        <item>filter 1</item>
+        <item>filter 2</item>
+    </string-array>
+
+    <string-array name="contact_options">
+        <item>Select Contact </item>
+        <item>filter 1</item>
+        <item>filter 2</item>
+    </string-array>
+</resources>

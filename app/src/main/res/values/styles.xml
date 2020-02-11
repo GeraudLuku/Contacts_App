@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+<!--        <item name="colorControlNormal">@color/colorAccent</item>-->
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back</item>
+        <item name="spinnerStyle">@style/MySpinnerStyle</item>
+    </style>
+
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="MySpinnerStyle" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.geraudluku.contactsapp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_contactsSettingsFragment"
+            app:destination="@id/contactsSettingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addContactsFragment"
+            app:destination="@id/addContactsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsSettingsFragment"
+        android:name="com.geraudluku.contactsapp.ContactsSettingsFragment"
+        android:label="fragment_contacts_settings"
+        tools:layout="@layout/fragment_contacts_settings" >
+        <action
+            android:id="@+id/action_contactsSettingsFragment_to_addableAsContactFragment"
+            app:destination="@id/addableAsContactFragment" />
+        <action
+            android:id="@+id/action_contactsSettingsFragment_to_blockContactsFragment"
+            app:destination="@id/blockContactsFragment" />
+        <action
+            android:id="@+id/action_contactsSettingsFragment_to_deleteContactsFragment"
+            app:destination="@id/deleteContactsFragment" />
+        <action
+            android:id="@+id/action_contactsSettingsFragment_to_reportContactsFragment"
+            app:destination="@id/reportContactsFragment" />
+        <action
+            android:id="@+id/action_contactsSettingsFragment_to_importContactsFragment"
+            app:destination="@id/importContactsFragment" />
+        <action
+            android:id="@+id/action_contactsSettingsFragment_to_exportContactsFragment"
+            app:destination="@id/exportContactsFragment" />
+        <action
+            android:id="@+id/action_contactsSettingsFragment_to_shareContactsFragment"
+            app:destination="@id/shareContactsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addableAsContactFragment"
+        android:name="com.geraudluku.contactsapp.AddableAsContactFragment"
+        android:label="fragment_addable_as_contact"
+        tools:layout="@layout/fragment_addable_as_contact" />
+    <fragment
+        android:id="@+id/blockContactsFragment"
+        android:name="com.geraudluku.contactsapp.BlockContactsFragment"
+        android:label="fragment_block_contacts"
+        tools:layout="@layout/fragment_block_contacts" />
+    <fragment
+        android:id="@+id/deleteContactsFragment"
+        android:name="com.geraudluku.contactsapp.DeleteContactsFragment"
+        android:label="fragment_delete_contacts"
+        tools:layout="@layout/fragment_delete_contacts" />
+    <fragment
+        android:id="@+id/reportContactsFragment"
+        android:name="com.geraudluku.contactsapp.ReportContactsFragment"
+        android:label="fragment_report_contacts"
+        tools:layout="@layout/fragment_report_contacts" />
+    <fragment
+        android:id="@+id/importContactsFragment"
+        android:name="com.geraudluku.contactsapp.ImportContactsFragment"
+        android:label="fragment_import_contacts"
+        tools:layout="@layout/fragment_import_contacts" />
+    <fragment
+        android:id="@+id/exportContactsFragment"
+        android:name="com.geraudluku.contactsapp.ExportContactsFragment"
+        android:label="fragment_export_contacts"
+        tools:layout="@layout/fragment_export_contacts" />
+    <fragment
+        android:id="@+id/shareContactsFragment"
+        android:name="com.geraudluku.contactsapp.ShareContactsFragment"
+        android:label="fragment_share_contacts"
+        tools:layout="@layout/fragment_share_contacts" />
+    <fragment
+        android:id="@+id/addContactsFragment"
+        android:name="com.geraudluku.contactsapp.AddContactsFragment"
+        android:label="fragment_add_contacts"
+        tools:layout="@layout/fragment_add_contacts" />
+</navigation>
