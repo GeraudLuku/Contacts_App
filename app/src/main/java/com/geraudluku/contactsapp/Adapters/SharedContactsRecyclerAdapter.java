@@ -52,16 +52,17 @@ public class SharedContactsRecyclerAdapter extends RecyclerView.Adapter<SharedCo
 
         Glide.with(context).load(contact.getProfile_picture()).into(holder.mProfile);
 
+        holder.mCheckBox.setOnCheckedChangeListener(null);
         //if selected all box is pressed
         if (!isSelectedAll) {
-            holder.mCheckBox.setOnCheckedChangeListener(null);
+
             holder.mCheckBox.setChecked(false);
+
         } else {
-            holder.mCheckBox.setOnCheckedChangeListener(null);
             holder.mCheckBox.setChecked(true);
         }
 
-        holder.mCheckBox.setOnCheckedChangeListener(mOnCheckedChangeListener);
+        holder.mCheckBox.setOnClickListener(mOnClickListener);
 
     }
 
@@ -95,20 +96,11 @@ public class SharedContactsRecyclerAdapter extends RecyclerView.Adapter<SharedCo
         notifyDataSetChanged();
     }
 
-    public void remove(ArrayList<Contact> contacts) {
-        for (Contact contact : contacts) {
-            sharedContactsList.remove(contact);
-            notifyItemRemoved(sharedContactsList.indexOf(contact));
-            notifyItemRangeChanged(sharedContactsList.indexOf(contact), sharedContactsList.size());
-        }
-    }
 
-    //checkbox onSetCheck listener
-    private CompoundButton.OnCheckedChangeListener mOnCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+    private View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            // pass contact object and boolean state
-            sharedContactsImportContactsInterface.onContactSelected(sharedContactsList.get(adapterPosition), isChecked);
+        public void onClick(View v) {
+            sharedContactsImportContactsInterface.onContactSelected(sharedContactsList.get(adapterPosition), adapterPosition, ((CompoundButton) v).isChecked());
         }
     };
 

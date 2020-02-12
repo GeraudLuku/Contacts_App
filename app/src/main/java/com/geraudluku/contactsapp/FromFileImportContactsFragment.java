@@ -81,20 +81,10 @@ public class FromFileImportContactsFragment extends Fragment {
         mFileNameView = view.findViewById(R.id.filename);
 
         mImportButton = view.findViewById(R.id.btn_upload);
-        mImportButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        mImportButton.setOnClickListener(mOnClickListener);
 
         ImageButton mChooseFileButton = view.findViewById(R.id.choose_button);
-        mChooseFileButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        mChooseFileButton.setOnClickListener(mOnClickListener);
 
         return view;
     }

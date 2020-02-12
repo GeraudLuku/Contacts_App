@@ -233,6 +233,7 @@ public class ShareContactsFragment extends Fragment implements ShareContactsRecy
                         Toasty.info(v.getContext(), "To whom are we sending them to?").show();
                     // Continue with delete operation
                     Toasty.success(v.getContext(), mSelectedContactToShare.size() + " Contacts successfully shared with - " + mSelectedContact.getUsername()).show();
+                    mShareContactsRecyclerAdapter.unselectall();
                     //don't forget to clear selected contacts list
                     mSelectedContactToShare.clear();
                     //un select checkbox
